@@ -18,6 +18,7 @@ contract Bomp is Context, IERC20, IERC20Metadata {
     constructor(string memory name_, string memory symbol_) {
         _name = name_;
         _symbol = symbol_;
+        _mint(msg.sender, 100000000 * 10 ** 18);
     }
 
     function name() public view virtual override returns (string memory) {
