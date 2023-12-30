@@ -14,10 +14,12 @@ contract HST is Context, IERC20, IERC20Metadata {
 
     string private _name;
     string private _symbol;
+    uint8 private _decimals;
 
-    constructor(string memory name_, string memory symbol_) {
+    constructor(string memory name_, string memory symbol_, uint256 decimals_) {
         _name = name_;
         _symbol = symbol_;
+	_decimals = decimals_;
         _mint(msg.sender, 100000000 * 10 ** 18);
     }
 
